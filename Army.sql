@@ -1,5 +1,4 @@
 Create table Army (
-    id serial primary key,
     Country varchar(50),
     activeDuty int,
     paramilitary int,
@@ -7,5 +6,7 @@ Create table Army (
     total int,
     pop2022 float,	
     Country_id int,
-    FOREIGN KEY (Country_id)  REFERENCES population (Id)
-);
+    FOREIGN KEY (Country_id)  REFERENCES country (id)
+    );
+
+    \copy Army FROM '/datasets/army.csv' WITH (FORMAT CSV, DELIMITER ',', HEADER true);

@@ -1,9 +1,9 @@
 
-Drop table population;
-Drop table population2;
+Drop table country2;
+Drop table country;
 
 
-create table population2 (
+create table country2 (
     id serial primary key,
     country varchar(100),
     last_updated_2023 varchar(20),
@@ -15,9 +15,9 @@ create table population2 (
     world varchar(10)
 );
 
-create table population (
-  id serial primary key,
-  country varchar(100),
+create table country (
+ id serial primary key,
+ country varchar(100),
  last_updated_2023 int,
  population_2022 int,
  area_sq_km float,
@@ -25,7 +25,6 @@ create table population (
  density_sq_km float,
  growth_rate float,
  world float
-
  );
 
 
