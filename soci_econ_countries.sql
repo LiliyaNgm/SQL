@@ -17,7 +17,9 @@ Create table Soci_econ (
     Population_male float,
     Continent_id int,
     
-    FOREIGN KEY (Continent_id)  REFERENCES Continent (id)
+    FOREIGN KEY (Continent_id)  REFERENCES Continent (Continent_id)
     
 );
  
+
+ \copy Soci_econ FROM '/datasets/Soci_econ_countries.csv' WITH (FORMAT CSV, DELIMITER ',', HEADER true);

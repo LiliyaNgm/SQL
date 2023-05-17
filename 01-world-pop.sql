@@ -9,7 +9,7 @@ create table world_pop2 (
     World_Share varchar(10),
     Capital_id int,
    
-       FOREIGN KEY (Capital_id)  REFERENCES Capitals (id)
+       FOREIGN KEY (Capital_id)  REFERENCES Capitals (Capital_id)
 );
 
 create table world_pop (
@@ -22,6 +22,6 @@ create table world_pop (
    World_Share float,
    Capital_id int,
    
-       FOREIGN KEY (Capital_id)  REFERENCES Capitals (id)
+       FOREIGN KEY (Capital_id)  REFERENCES Capitals (Capital_id)
     
  );

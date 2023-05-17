@@ -4,7 +4,7 @@ Drop table country;
 
 
 create table country2 (
-    id serial primary key,
+    country_id serial primary key,
     country varchar(100),
     last_updated_2023 varchar(20),
     population_2022 varchar(20),
@@ -16,7 +16,7 @@ create table country2 (
 );
 
 create table country (
- id serial primary key,
+ country_id serial primary key,
  country varchar(100),
  last_updated_2023 int,
  population_2022 int,

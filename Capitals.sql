@@ -1,8 +1,8 @@
 Create table Capitals (
-    id serial primary key,
+    Capital_id serial primary key,
     Capital varchar(50),	
     Country_id int,
-    FOREIGN KEY (Country_id)  REFERENCES Country (id)  
+    FOREIGN KEY (Country_id)  REFERENCES Country (Country_id)  
     
 );
 

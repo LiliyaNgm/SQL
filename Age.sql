@@ -4,7 +4,7 @@ Create table Age (
     Male_Life float,	
     Female_Life float,
     Continent_id int,
-    FOREIGN KEY (Continent_id)  REFERENCES Continent (id)
+    FOREIGN KEY (Continent_id)  REFERENCES Continent (Continent_id)
     
 );
 

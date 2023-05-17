@@ -1,10 +1,10 @@
 create table Continent (
- id serial primary key,
+ Continent_id serial primary key,
  Continent varchar(30)
 );
 
 INSERT INTO Continent 
-(id, Continent)
+(Continent_id, Continent)
 VALUES (1, 'Europe'),
 (2, 'Asia'),
 (3, 'Africa'),
