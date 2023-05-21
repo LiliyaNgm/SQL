@@ -15,3 +15,9 @@ INSERT INTO country
 SELECT
 country_id, country, CAST(last_updated_2023 AS INT), CAST(population_2022 AS INT), CAST(area_sq_km AS FLOAT), CAST(land_area_sq_km AS FLOAT), CAST(density_sq_km AS FLOAT), CAST(growth_rate AS FLOAT), CAST(world AS FLOAT)
 FROM country2;
+
+
+UPDATE country SET area_sq_km = REPLACE(area_sq_km, '00000', '000000');
+UPDATE country SET area_sq_km = REPLACE(area_sq_km, '00', '0000');
+UPDATE country SET land_area_sq_km= REPLACE(land_area_sq_km, '00000', '000000');
+UPDATE country SET land_area_sq_km= REPLACE(land_area_sq_km, '00', '0000');
