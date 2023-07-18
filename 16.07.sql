@@ -32,3 +32,50 @@ $$ language SQl
 
 select * from Cars_max_min();
 
+Create or replace function Cars_D() returns setof double precision as $$
+select avg(price)
+from cars
+group by car
+$$ language SQl
+;
+
+select * from Cars_D;
+
+
+Create or replace function Cars_S_A(out sum_price real, out avg_price float) returns setof record as $$
+select sum(price), avg(price)
+from cars
+group by car
+$$ language SQl
+;
+
+select sum_price, avg_price from Cars_S_A();
+
+Drop function Cars_S_A;
+
+Create or replace function Cars_S_A() returns setof record as $$
+select sum(price), avg(price)
+from cars
+group by car
+$$ language SQl
+;
+
+select * from Cars_S_A() as (sum_price real, avg_price float); # второй вариант как вернуть несколько строк
+
+
+
+Create or replace function Cars_T(car varchar) returns table(car varchar, body varchar, model varchar) as $$
+select car, body, model
+from cars
+$$ language SQl
+;
+
+select * from Cars_T('Nissan');
+
+Create or replace function Cars_S() returns setof cars as $$
+select *
+from cars
+$$ language SQl
+;
+
+select * from Cars_S();
