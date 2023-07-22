@@ -63,19 +63,21 @@ $$ language SQl
 select * from Cars_S_A() as (sum_price real, avg_price float); # второй вариант как вернуть несколько строк
 
 
-
 Create or replace function Cars_T(car varchar) returns table(car varchar, body varchar, model varchar) as $$
 select car, body, model
 from cars
+where car = cars_t.car
 $$ language SQl
 ;
 
 select * from Cars_T('Nissan');
 
-Create or replace function Cars_S() returns setof cars as $$
+Create or replace function Cars_S(car varchar) returns setof cars as $$
 select *
 from cars
+where car = cars_s.car
 $$ language SQl
 ;
 
-select * from Cars_S();
+select * from Cars_S('BMW');
+

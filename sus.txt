@@ -1,3 +1,3 @@
-Эсей сохранять : control S
+Эсей! сохранять : control S
 Копировать : control C
-Вставить : control V
+Вставить : control Vы
