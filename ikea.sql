@@ -4,7 +4,7 @@ Create table Ikea (
     Category varchar(50),
     Price float,	
     Other_color varchar(50),
-    Designer varchar(50),
+    Designer varchar(500),
     Depth int,
     Height int,
     Width int
